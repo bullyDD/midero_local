@@ -1,0 +1,19 @@
+name = "midero"
+description = "Robotic with Ada"
+tags = ["ada", "stm32", "robotic", "embedded"]
+version = "0.1.0"
+
+authors = ["bullydd"]
+maintainers = ["bullydd <clubdeveloppeursenegal@gmail.com>"]
+maintainers-logins = ["bullydd"]
+
+executables = ["midero"]
+licenses = "BSD-3-Clause"
+
+[[depends-on]]
+stm32f429disco = "0.1.0"
+stm32_gui = "0.1.0"
+
+[[pins]]
+gnat_arm_elf = { version='12.2.1' }
+
