@@ -1,13 +1,12 @@
 -- Unitary test DC Motor
 with Ada.Real_Time;                 use Ada.Real_Time;
-
-with STM32.Device;                  use STM32.Device;
 with STM32.Board;                   use STM32.Board;
 
-
+with STM32.Device;                  
+with Lcd_Out;                       use Lcd_Out;
 with Motor;                         use Motor;
 with Quadrature_Encoders;           use Quadrature_Encoders;
-with Lcd_Out;                       use Lcd_Out;
+
 
 
 procedure Demo_Encoder is
@@ -115,7 +114,7 @@ begin
             if Throttle_Setting = 0 then
                 All_Stop;
             else
-                M1.Run (Power => Throttle_Setting);
+                M1.Run;
             end if;
         end if;
 
